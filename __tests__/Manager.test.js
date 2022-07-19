@@ -1,10 +1,9 @@
-const Manager = require("../lib/manager");
-const Employee = require("../lib/employee");
+const Manager = require("../assets/lib/manager");
+const Employee = require("../assets/lib/employee");
 
-test("Can set office number via constructor argument", () => {
-  const testValue = 100;
-  const e = new Manager("Foo", 1, "test@test.com", testValue);
-  expect(e.officeNumber).toBe(testValue);
+test("Checks that office number exists", () => {
+  const e = new Manager("Foo", 1, "test@test.com");
+  expect(typeof e.officeNumber).toBe("number");
 });
 
 test("getRole() should return \"Manager\"", () => {
@@ -14,7 +13,6 @@ test("getRole() should return \"Manager\"", () => {
 });
 
 test("Can get office number via getOffice()", () => {
-  const testValue = 100;
-  const e = new Manager("Foo", 1, "test@test.com", testValue);
-  expect(e.getOfficeNumber()).toBe(testValue);
+  const e = new Manager("Foo", "test@test.com", 1);
+  expect(typeof e.getOffice()).toBe("number");
 });

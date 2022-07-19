@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest Employee.test.js"
+    "test": "jest Manager.test.js"
   },
   "repository": {
     "type": "git",

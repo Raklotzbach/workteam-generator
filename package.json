@@ -1,0 +1,23 @@
+{
+  "name": "workteam-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest Employee.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raklotzbach/workteam-generator.git"
+  },
+  "author": "Akira Klotzbach",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raklotzbach/workteam-generator/issues"
+  },
+  "homepage": "https://github.com/Raklotzbach/workteam-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "jest": "^28.1.3"
+  }
+}

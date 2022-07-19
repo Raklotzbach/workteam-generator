@@ -212,7 +212,7 @@ function writeToFile() {
     let finalEL = finalHTML.join()
     // replace erroneous commas with nothing
     finalEL = finalEL.replace(/,/g,'')
-    fs.writeFile("write.html", finalEL, (err) => {
+    fs.writeFile("index.html", finalEL, (err) => {
         if (err) {
             console.error(err)
         } else {

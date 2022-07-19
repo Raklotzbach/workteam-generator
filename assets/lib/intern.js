@@ -5,7 +5,14 @@ class Intern extends Employee {
         this.title = "Intern"
         this.school = school
     }
+
+    getSchool() {
+        return this.school
+    }
+
 }
+
+const newIntern =  new Intern ("John", "john@email.com", "UCLA")
 
 
 module.exports = Intern

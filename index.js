@@ -21,12 +21,12 @@ const finalHTML = [
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.1/css/bootstrap.min.css"/>  <!-- Import bootstrap stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>`,
-
-    // <!-- Team Cards Will Populate Here -->
+   
+    
         
 `</body>
 </html>`
@@ -143,11 +143,19 @@ inquirer.prompt({
     for (let i = 0; i < mgrEmpty.length; i++) {
         const managerEl = mgrEmpty[i];
         const managerElhtml = `
-        <h1 class="m-5" >${managerEl.title}</h1>
-        <h1>${managerEl.name}</h1>
-        <p>${managerEl.email}</p>
-        <p>${managerEl.id}</p>
-        <p>${managerEl.officeNumber}</p>
+        <div class="card m-3 text-bg-primary" style="width: 18rem;">
+             <div class="card-header text-bg-primary">
+                ${managerEl.title}
+            </div>
+            <div class="card-header text-bg-info">
+                ${managerEl.name}
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Email: ${managerEl.email}</li>
+                <li class="list-group-item">Employee ID: ${managerEl.id}</li>
+                <li class="list-group-item">Office Number: ${managerEl.officeNumber}</li>
+            </ul>
+        </div>
         `
         managerCard.push(managerElhtml)
     }
@@ -157,11 +165,19 @@ inquirer.prompt({
     for (let i = 0; i < engineerEmpty.length; i++) {
         const engineerEl = engineerEmpty[i];
         const engineerElhtml = `
-        <h1>${engineerEl.title}</h1>
-        <h1>${engineerEl.name}</h1>
-        <p>${engineerEl.email}</p>
-        <p>Employee ID: ${engineerEl.id}</p>
-        <p>GitHub: ${engineerEl.gitHub}</p>
+        <div class="card m-3 text-bg-primary" style="width: 18rem;">
+            <div class="card-header text-bg-primary">
+                ${engineerEl.title}
+            </div>
+            <div class="card-header text-bg-info">
+                ${engineerEl.name}
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Email: ${engineerEl.email}</li>
+                <li class="list-group-item">Employee ID: ${engineerEl.id}</li>
+                <li class="list-group-item">GitHub: ${engineerEl.gitHub}</li>
+            </ul>
+        </div>
         `
         engineerCard.push(engineerElhtml)
     }
@@ -171,11 +187,19 @@ inquirer.prompt({
     for (let i = 0; i < internEmpty.length; i++) {
         const internEl = internEmpty[i];
         const internElhtml = `
-        <h1>${internEl.title}</h1>
-        <h1>${internEl.name}</h1>
-        <p>${internEl.email}</p>
-        <p>Intern ID: ${internEl.id}</p>
-        <p>Intern's School: ${internEl.school}</p>
+        <div class="card m-3 text-bg-primary" style="width: 18rem;">
+            <div class="card-header text-bg-primary">
+                ${internEl.title}
+            </div>
+            <div class="card-header text-bg-info">
+                ${internEl.name}
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Email: ${internEl.email}</li>
+                <li class="list-group-item">Employee ID: ${internEl.id}</li>
+                <li class="list-group-item">Intern's School: ${internEl.school}</li>
+            </ul>
+        </div>
         `
         internCard.push(internElhtml)
     }

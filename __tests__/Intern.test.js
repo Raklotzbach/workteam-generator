@@ -1,8 +1,9 @@
-const Intern = require("../lib/intern");
+const Intern = require("../assets/lib/intern");
+const Employee = require("../assets/lib/employee");
 
 test("Can set school via constructor", () => {
   const testValue = "UCLA";
-  const e = new Intern("Foo", 1, "test@test.com", testValue);
+  const e = new Intern("Foo", 1, testValue);
   expect(e.school).toBe(testValue);
 });
 
@@ -14,6 +15,6 @@ test("getRole() should return \"Intern\"", () => {
 
 test("Can get school via getSchool()", () => {
   const testValue = "UCLA";
-  const e = new Intern("Foo", 1, "test@test.com", testValue);
+  const e = new Intern("Foo","test@test.com", testValue);
   expect(e.getSchool()).toBe(testValue);
 });
